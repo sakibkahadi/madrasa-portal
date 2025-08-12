@@ -1,6 +1,7 @@
 // middleware.js
 import { NextResponse } from "next/server";
 import { getToken } from "next-auth/jwt";
+import { rootDomain } from "./lib/utils";
 
 function extractSubdomain(req){
   // "http://localhost:3000/"
