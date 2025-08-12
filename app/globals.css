@@ -1,0 +1,219 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import 'react-datepicker/dist/react-datepicker.css';
+
+/* Base styles */
+@layer base {
+  :root {
+    --background: #ffffff; /* Light background */
+    --foreground: #333333; /* Dark text */
+    
+    --card: #f9f9f9; /* Light card */
+    --card-foreground: #333333; /* Dark text on card */
+    
+    --popover: #ffffff; /* White popover */
+    --popover-foreground: #333333; /* Dark text on popover */
+    
+    --primary: #5f98b5; /* Primary blue */
+    --primary-foreground: #ffffff; /* White text on primary */
+    
+    --secondary: #9ac9e1; /* Secondary green */
+    --secondary-foreground: #ffffff; /* White text on secondary */
+    
+    --accent: #5eb7e5; /* Accent orange */
+    --accent-foreground: #ffffff; /* White text on accent */
+    
+    --muted: #ecf0f1; /* Muted light gray */
+    --muted-foreground: #34495e; /* Dark muted text */
+    
+    --destructive: #e74c3c; /* Destructive red */
+    --destructive-foreground: #ffffff; /* White text on destructive */
+
+    --border: #bdc3c7; /* Light gray border */
+    --input: #ffffff; /* White input */
+    --ring: #3498db; /* Primary blue ring */
+    
+    --radius: 0.5rem; /* Border radius */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-text;
+  }
+}
+
+/* Define custom classes */
+@layer utilities {
+  .bg-background-dark {
+    background-color: var(--foreground); /* Dark background */
+  }
+  .bg-border-dark {
+    background-color: var(--border); /* Light gray border background */
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-muted; /* Light muted background for scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  @apply rounded bg-border; /* Light gray for scrollbar thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary; /* Primary blue on hover */
+}
+
+/* Transition classes */
+.page-transition {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+.fade-in {
+  @apply animate-in duration-300; /* Removed circular dependency */
+}
+
+.sidebar-expanded {
+  @apply w-64 transition-all duration-300 ease-in-out;
+}
+
+.sidebar-collapsed {
+  @apply w-20 transition-all duration-300 ease-in-out;
+}
+
+.content-with-sidebar-expanded {
+  @apply pl-64 transition-all duration-300 ease-in-out;
+}
+
+.content-with-sidebar-collapsed {
+  @apply pl-20 transition-all duration-300 ease-in-out;
+}
+
+
+.poppins-thin {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.poppins-extralight {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.poppins-extrabold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.poppins-black {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.poppins-thin-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.poppins-extralight-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.poppins-light-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.poppins-regular-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.poppins-medium-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.poppins-semibold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.poppins-bold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.poppins-extrabold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.poppins-black-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+
+.card-background {
+  background-image: url('/assets/prayer.jpg'); /* Adjust the path as necessary */
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px; /* Optional: for rounded corners */
+  color: white; /* Change text color for better contrast */
+}
